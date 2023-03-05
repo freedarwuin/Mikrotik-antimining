@@ -1,6 +1,6 @@
 /system script
-add name=download_antimining policy=read,write,policy,test source="/tool fetch url="http://192.168.1.4/mikrotik/antimining_dns.rsc" mode=http;
-:log info "Downloaded antimining_dns.rsc from 192.168.1.4";"
+add name=download_antimining policy=read,write,policy,test source="/tool fetch url="http://192.168.10.2/mikrotik/antimining_dns.rsc" mode=http;
+:log info "Downloaded antimining_dns.rsc from 192.168.10.2";"
     
 add name=replace_antimining policy=read,write,policy,test source="/ip dns static remove [find where comment="antimining"]
 /import file-name=antimining_dns.rsc;
